@@ -1,0 +1,80 @@
+/*---- Main Interesante ----*/
+.main-interesante {
+    h1 {
+        color: white;
+        background-color: #ff2727;
+        width: 220px;
+        margin: 10px auto;
+        padding: 5px 16px;
+        font-family: $fuente_sin-serifa;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .noti-interesante {
+        div {
+            height: 140px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 10px;
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        .int1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url('https://i0.wp.com/www.periodismo.com/wp-content/subid/Las-impactantes-imagenes-del-World-Press-Photo-2024-29.jpg?resize=356%2C364&ssl=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .int2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url('https://i0.wp.com/www.periodismo.com/wp-content/subid/Tiempo-de-leer.jpg?resize=356%2C364&ssl=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .int3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url('https://i0.wp.com/www.periodismo.com/wp-content/subid/Coperni.jpg?resize=356%2C364&ssl=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .int4 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url('https://i0.wp.com/www.periodismo.com/wp-content/subid/9239246390_c7f0d0dcb9_b.jpg?resize=356%2C364&ssl=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+/*MEDIA QUERYS*/
+/*Estrategia Mobile First → Min-width*/
+
+@media (min-width: 601px) {
+    .main-interesante {
+        .noti-interesante {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            div {
+                margin: 2px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .main-interesante {
+        .noti-interesante {
+            grid-template-columns: repeat(4, 1fr);
+
+            div {
+                height: 350px;
+            }
+        }
+    }
+}

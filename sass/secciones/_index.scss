@@ -1,0 +1,64 @@
+.main-index {
+    max-width: 850px;
+    margin: auto;
+    .noticias-importantes{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "servicios servicios interesante resistencia"
+        "servicios servicios soluciones ciencia"
+        ;
+        .servicios{
+            grid-area: servicios;
+            background-color: #e5e545;
+        }
+        .interesante{
+            grid-area: interesante;
+            background-color: #e59d45;
+        }
+        .soluciones{
+            grid-area: soluciones;
+            background-color: #70e545;
+        }
+        .resistencia{
+            grid-area: resistencia;
+            background-color: #45e5b8;
+        }
+        .ciencia{
+            grid-area: ciencia;
+            background-color: #e58a45;
+        }
+    }
+}
+
+/*Estrategia Mobile Last  → Max-width*/
+@media (max-width: 900px){
+    .main-index {
+        max-width: 650px;
+        margin: auto;
+        .noticias-importantes{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "servicios interesante" 
+            "resistencia soluciones"
+            "ciencia ciencia";
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .main-index {
+        max-width: 350px;
+        margin: auto;
+        .noticias-importantes{
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "servicios"
+            "interesante"
+            "resistencia"
+            "soluciones"
+            "ciencia"
+            ;
+        }
+    }
+}

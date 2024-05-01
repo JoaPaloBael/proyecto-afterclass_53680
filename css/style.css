@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
+/*RESETEO*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-family: "STIX Two Text", serif;
+}
+
+.nav li {
+  display: inline-block;
+  padding: 10px;
+  background-color: #e59d45;
+}
+.nav li a {
+  color: #E04343;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-index {
+  max-width: 850px;
+  margin: auto;
+}
+.main-index .noticias-importantes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "servicios servicios interesante resistencia" "servicios servicios soluciones ciencia";
+}
+.main-index .noticias-importantes .servicios {
+  grid-area: servicios;
+  background-color: #e5e545;
+}
+.main-index .noticias-importantes .interesante {
+  grid-area: interesante;
+  background-color: #e59d45;
+}
+.main-index .noticias-importantes .soluciones {
+  grid-area: soluciones;
+  background-color: #70e545;
+}
+.main-index .noticias-importantes .resistencia {
+  grid-area: resistencia;
+  background-color: #45e5b8;
+}
+.main-index .noticias-importantes .ciencia {
+  grid-area: ciencia;
+  background-color: #e58a45;
+}
+
+/*Estrategia Mobile Last  → Max-width*/
+@media (max-width: 900px) {
+  .main-index {
+    max-width: 650px;
+    margin: auto;
+  }
+  .main-index .noticias-importantes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "servicios interesante" "resistencia soluciones" "ciencia ciencia";
+  }
+}
+@media (max-width: 700px) {
+  .main-index {
+    max-width: 350px;
+    margin: auto;
+  }
+  .main-index .noticias-importantes {
+    grid-template-columns: 1fr;
+    grid-template-areas: "servicios" "interesante" "resistencia" "soluciones" "ciencia";
+  }
+}
+/*---- Main Interesante ----*/
+.main-interesante h1 {
+  color: white;
+  background-color: #ff2727;
+  width: 220px;
+  margin: 10px auto;
+  padding: 5px 16px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  font-weight: bolder;
+}
+.main-interesante .noti-interesante div {
+  height: 140px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.main-interesante .noti-interesante div h2 {
+  font-size: 18px;
+}
+.main-interesante .noti-interesante .int1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url("https://i0.wp.com/www.periodismo.com/wp-content/subid/Las-impactantes-imagenes-del-World-Press-Photo-2024-29.jpg?resize=356%2C364&ssl=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-interesante .noti-interesante .int2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url("https://i0.wp.com/www.periodismo.com/wp-content/subid/Tiempo-de-leer.jpg?resize=356%2C364&ssl=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-interesante .noti-interesante .int3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url("https://i0.wp.com/www.periodismo.com/wp-content/subid/Coperni.jpg?resize=356%2C364&ssl=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-interesante .noti-interesante .int4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0)), url("https://i0.wp.com/www.periodismo.com/wp-content/subid/9239246390_c7f0d0dcb9_b.jpg?resize=356%2C364&ssl=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*MEDIA QUERYS*/
+/*Estrategia Mobile First → Min-width*/
+@media (min-width: 601px) {
+  .main-interesante .noti-interesante {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-interesante .noti-interesante div {
+    margin: 2px;
+  }
+}
+@media (min-width: 768px) {
+  .main-interesante .noti-interesante {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main-interesante .noti-interesante div {
+    height: 350px;
+  }
+}/*# sourceMappingURL=style.css.map */
